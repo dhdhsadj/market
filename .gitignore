@@ -1,4 +1,5 @@
 .DS_Store
+<<<<<<< HEAD
 node_modules
 /dist
 
@@ -21,3 +22,11 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+=======
+*.pyc
+*.egg-info
+*.swp
+tags
+market/docs/current
+node_modules/
+>>>>>>> 19e7807dfb6d87d9317f511b5526274c9d7543c3
