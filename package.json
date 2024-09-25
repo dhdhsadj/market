@@ -1,20 +1,28 @@
 {
-  "name": "nome-do-projeto",
-  "version": "0.1.0",
+  "name": "market",
+  "version": "1.0.0",
+  "description": "Mercado digital que permite a criação de bancadas online, onde vendedores podem cadastrar e gerenciar seus produtos para venda direta ao consumidor. Oferece um espaço personalizado para cada vendedor, facilitando o controle de produtos, preços e inventário, além de oferecer uma experiência de compra simples e integrada para os clientes.",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd store && yarn install",
+    "dev": "cd store && yarn dev"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "core-js": "^3.8.3",
     "pinia": "^2.2.2",
     "swiper": "^11.1.12",
     "vue": "^3.2.13",
-    "vue-class-component": "^8.0.0-0",
+    "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.3",
-    "vuetify": "^3.7.1"
+    "vuetify": "^3.7.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

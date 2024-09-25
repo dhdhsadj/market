@@ -213,3 +213,5 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"market.auth.validate"
 # ]
+
+website_route_rules = [{'from_route': '/store1/<path:app_path>', 'to_route': 'store1'}, {'from_route': '/store/<path:app_path>', 'to_route': 'store'},]
