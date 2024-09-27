@@ -8,6 +8,7 @@ import socket from '../../../doppio/libs/controllers/socket';
 import { createVuetify } from 'vuetify';
 import 'vuetify/styles';
 
+createApp(App).use(router).mount('#app')
 const app = createApp(App);
 const auth = reactive(new Auth());
 const vuetify = createVuetify();

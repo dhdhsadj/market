@@ -74,11 +74,12 @@ export default defineComponent({
           console.log('Resposta do login:', res); // Para depuração
 
           if (res && typeof res === 'object') {
-            if (res.hasOwnProperty('exc_type')) {
+            if (res.message == "Logged In") {
               this.message = "Login realizado com sucesso!";
               this.isSuccess = true;
-              this.$auth.isLoggedIn = true; // Update isLoggedIn property
-              this.router.push({ name: 'Home' });
+              localStorage.setItem('isLoggedIn', 'true'); // Salvando status de login
+              this.$router.replace('/home'); // Redirecionamento direto
+            
             } else {
               this.message = "Login falhou. Verifique suas credenciais.";
               this.isSuccess = false;
@@ -99,12 +100,15 @@ export default defineComponent({
             this.message = "Ocorreu um erro desconhecido durante o login. Tente novamente.";
           }
           this.isSuccess = false;
+        } finally {
+          this.isLoading = false; // Certifique-se de parar o loading após o processo
         }
       }
     }
   }
 });
 </script>
+
 <style scoped>
 .login-container {
   display: flex;

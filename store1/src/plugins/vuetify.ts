@@ -1,8 +1,8 @@
 import { createVuetify } from 'vuetify';
-import 'vuetify/styles'; // Importa os estilos do Vuetify
+import 'vuetify/styles'; 
 
 const vuetify = createVuetify({
-  // Aqui você pode adicionar configurações do Vuetify, se necessário
+  
 });
 
 export default vuetify;

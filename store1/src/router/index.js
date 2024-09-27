@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from '@/views/Home.vue';
 import auth from "./auth";
 import StandDetail1 from '../views/StandDetail1.vue';
 import BancadasPage from '../views/BancadasPage.vue';
@@ -108,30 +108,28 @@ const routes = [
     component: Warranty,
     meta: { requiresAuth: false },
   },
-  // Rota catch-all corrigida
+  // Redirecionar para login se rota não encontrada
   {
     path: '/:pathMatch(.*)*',
-    redirect: '/login'
-  },
+    redirect: '/login',
+  }
 ];
 
 const router = createRouter({
-  base: "/store1/",
   history: createWebHistory(),
   routes,
 });
 
 router.beforeEach((to, from, next) => {
-  const auth = router.app ? router.app.config.globalProperties.$auth : null;
-
+  const isLoggedIn = localStorage.getItem("isLoggedIn"); // Exemplo simples de verificação
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (!auth || !auth.isLoggedIn) {
+    if (!isLoggedIn) {
       next({ name: "Login", query: { redirect: to.fullPath } });
     } else {
       next();
     }
   } else if (to.matched.some(record => record.meta.isLoginPage)) {
-    if (auth && auth.isLoggedIn) {
+    if (isLoggedIn) {
       next({ name: "Home" });
     } else {
       next();

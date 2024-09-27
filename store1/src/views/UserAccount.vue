@@ -40,7 +40,6 @@
         </div>
       </div>
     </div>
-  
   </div>
   <Footer :customClass="'custom-footer'" />
 </template>
@@ -110,10 +109,14 @@ export default defineComponent({
     };
 
     const logout = () => {
-      // Implementar a lógica de logout aqui
+      // Remove o estado de autenticação do localStorage
+      localStorage.removeItem("isLoggedIn");
+
+      // Exibe uma mensagem de sucesso no console (opcional)
       console.log("Usuário desconectado!");
-      // Você pode redirecionar para a página de login, por exemplo:
-      // router.push({ name: 'login' });
+
+      // Redireciona para a página de login
+      router.push({ name: 'Login' });
     };
 
     return {
@@ -128,6 +131,7 @@ export default defineComponent({
   },
 });
 </script>
+
 
 <style scoped>
 .stand-page {

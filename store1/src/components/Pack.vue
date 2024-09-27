@@ -102,7 +102,14 @@ export default defineComponent({
   padding: 16px 0;
   width: 100%;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* Para suavizar a rolagem no iOS */
+  
+  /* Esconde a barra de rolagem no Firefox */
+  scrollbar-width: none;
+}
+
+.product-scroll-box::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome, Safari e navegadores baseados no WebKit */
 }
 
 .product {
@@ -117,7 +124,7 @@ export default defineComponent({
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  justify-content: space-between;
 }
 
 .product-img {
@@ -168,7 +175,7 @@ export default defineComponent({
 }
 
 .arrow:hover {
-  color: #004d40;
+  color: #004d40; /* Muda a cor ao passar o mouse para dar feedback visual */
 }
 
 @media (max-width: 768px) {

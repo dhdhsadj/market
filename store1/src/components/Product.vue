@@ -102,7 +102,14 @@ export default defineComponent({
   padding: 16px 0;
   width: 100%;
   height: 100%;
-  -webkit-overflow-scrolling:touch; 
+  -webkit-overflow-scrolling: touch; /* Para suavizar a rolagem no iOS */
+  
+  /* Esconde a barra de rolagem no Firefox */
+  scrollbar-width: none;
+}
+
+.product-scroll-box::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome, Safari e navegadores baseados no WebKit */
 }
 
 .product {
@@ -177,4 +184,5 @@ export default defineComponent({
     max-width: 180px;
   }
 }
+
 </style>
