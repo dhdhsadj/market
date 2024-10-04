@@ -63,7 +63,7 @@ export default defineComponent({
     Category,
     Product,
     Pack,
-  },
+  }, 
   setup() {
     const currentPage = ref(1);
     const itemsPerPage = ref(10);
