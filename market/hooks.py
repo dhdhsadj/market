@@ -2,6 +2,8 @@ app_name = "market"
 app_title = "market"
 app_publisher = "Diogo Miguel"
 app_description = "Mercado digital que permite a criação de bancadas online, onde vendedores podem cadastrar e gerenciar seus produtos para venda direta ao consumidor. Oferece um espaço personalizado para cada vendedor, facilitando o controle de produtos, preços e inventário, além de oferecer uma experiência de compra simples e integrada para os clientes."
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"  
 app_email = "maguinhomast2005@gmail.com"
 app_license = "MIT"
 
@@ -11,14 +13,13 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/market/css/market.css"
 # app_include_js = "/assets/market/js/market.js"
-
 # include js, css files in header of web template
 # web_include_css = "/assets/market/css/market.css"
 # web_include_js = "/assets/market/js/market.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "market/public/scss/website"
-
+#app_dependencies = "erpnext"
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}

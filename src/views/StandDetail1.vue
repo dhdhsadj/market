@@ -170,7 +170,7 @@ export default defineComponent({
           categories: ["Livros", "Material de Leitura"],
         },
       ];
-
+        
       stand.value = mockStands.find(stand => stand.number === standId) || null;
     });
 
